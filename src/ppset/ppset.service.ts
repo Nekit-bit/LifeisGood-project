@@ -20,7 +20,7 @@ export class PpsetService {
   async savePicture(img,name){
     const save = createFile(name,img);
     if(save){
-      return name
+      return name;
     }
   }
 
