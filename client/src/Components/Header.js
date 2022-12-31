@@ -8,8 +8,25 @@ import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Contacts from '../Pages/Contacts';
 import Blog from '../Pages/Blog';
+import Signup from '../Pages/Signup';
+import { Login } from '../Pages/Login';
+
+import { Dialog } from 'primereact/dialog';
 
 export default class Header extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            displayLogin: false,
+            position: 'center'
+        };
+
+       
+    }
+
+   
+
     render() {
         return (
             <>
@@ -38,23 +55,35 @@ export default class Header extends Component {
                                 <Dropdown.Item href="/">Главная</Dropdown.Item>
                                 <Dropdown.Item href="/about">Питание</Dropdown.Item>
                                 <Dropdown.Item href="/contacts">Готовые сеты</Dropdown.Item>
-                                <Dropdown.Item href="/blog">Полезное</Dropdown.Item>
+                                <Dropdown.Item href="/blog">Форум</Dropdown.Item>
                             </DropdownButton>
 
                             <DropdownButton variant="danger" id="dropdown-basic-button" title="Вход">
-                                <Dropdown.Item href="#">Log in</Dropdown.Item>
-                                <Dropdown.Item href="#">Sign up</Dropdown.Item>
+                            <Button onClick={() => 0}>Test</Button>
+                                {/* <Dropdown.Item href="/login">Log in</Dropdown.Item> */}
+                                <Dropdown.Item href="/signup">Sign up</Dropdown.Item>
                             </DropdownButton>
 
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+
+                <Dialog header="Header" visible={this.state.displayLogin} style={{ width: '50vw' }} onHide={ () => 0}>
+                    <Container>
+                     <Login />
+                    </Container>
+                </Dialog>
+
+
+
                 <Router>
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/about' element={<About />} />
                         <Route path='/contacts' element={<Contacts />} />
                         <Route path='/blog' element={<Blog />} />
+                        <Route path='/Login' element={<Login />} />
+                        <Route path='/Signup' element={<Signup />} />
                     </Routes>
                 </Router>
             </>
