@@ -12,10 +12,10 @@ export class NutritionSet extends Model<NutritionSet,NutritionSetCreate>{
   id: number;
 
   @Column({type:DataType.STRING, unique:true})
-  header:string
+  header:string;
 
   @Column({type:DataType.STRING, unique:true})
-  value:string
+  value:string;
 
   @Column({type:DataType.STRING, unique:true})
   img_src:string

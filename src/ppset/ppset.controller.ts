@@ -7,25 +7,18 @@ import { PpsetService } from './ppset.service';
 export class PpsetController {
   constructor(private nutritionSetService: PpsetService ){}
 
-
   @Get()
   async getAllNutritionSet(){
     const sets = await this.nutritionSetService.getAllNutritionSet();
+    []
     return sets
   }
 
   @Post()
   async createNutritionSet(@Body() setDto: NutritionSetCreateDto){
-    const {img_src,header} = setDto;
-    const src = this.savePicture(img_src);
-    const sets = this.nutritionSetService.createNutritionSet(setDto);
+    const {header,value,img_src} = setDto
+    const sets = this.nutritionSetService.createNutritionSet('setPng', header, header, value, img_src);
     return sets
-  }
-
-
-  private async savePicture(img){
-    const picture = this.nutritionSetService.savePicture(img,"file-name");
-    return picture;
   }
 
 }

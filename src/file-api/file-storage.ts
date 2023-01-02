@@ -55,7 +55,7 @@ export const createFile = async (
     if (checkIfFileExists(path+'.html')) {
       throw new HttpException('FA',HttpStatus.BAD_REQUEST)
     }
-     await writeFile(`${path}.png`, data, 'utf8');
+     await writeFile(`${path}.txt`, data, 'utf8');
      return true
   }
   catch(e){
