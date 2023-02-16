@@ -46,8 +46,12 @@
   background-color: rgba(254, 154, 31, 0.989);
 }
 .zametki{
-  background-color: rgb(166, 233, 255);
+  background-color: rgb(201, 200, 200);
   padding: 15px;
+}
+.zametki-1{
+  background-color: rgb(201, 200, 200);
+  margin: 20px;
 }
 .p-image-preview-indicator {
   position: absolute;
@@ -61,5 +65,8 @@
   opacity: 0;
   transition: opacity .3s;
 }
-
+.chapter-racion-header{
+  text-align: center;
+  margin: 40px;
+}
 

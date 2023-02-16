@@ -4,7 +4,7 @@ export default class Blog extends Component {
     render() {
         return (
             <div>
-                Forum
+                <h2>Тут будет форум да-да!</h2>
             </div>
         )
     }

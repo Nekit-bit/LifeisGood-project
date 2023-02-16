@@ -46,8 +46,7 @@ export default class Header extends Component {
                                 <FormControl
                                     className="formcontrol-main"
                                     type="text"
-                                    placeholder="Поиск..."
-                                />
+                                    placeholder="Поиск..."                              />
                                 <Button variant="light" className="m-auto">Поиск</Button>
                             </Form>
 
@@ -59,8 +58,8 @@ export default class Header extends Component {
                             </DropdownButton>
 
                             <DropdownButton variant="danger" id="dropdown-basic-button" title="Вход">
-                            <Button onClick={() => 0}>Test</Button>
-                                {/* <Dropdown.Item href="/login">Log in</Dropdown.Item> */}
+                            {/* <Button onClick={() => 0}>Test</Button> */}
+                                <Dropdown.Item href="/login">Log in</Dropdown.Item>
                                 <Dropdown.Item href="/signup">Sign up</Dropdown.Item>
                             </DropdownButton>
 

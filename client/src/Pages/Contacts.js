@@ -36,7 +36,7 @@ export default class Contacts extends Component {
                     <Card className='m-4'>
                         <Card.Img 
                         variant='top'
-                        src={`base64 ${}`} />
+                        src='' />
                         <Card.Body>
                             <Card.Title>{set.header}</Card.Title>
                             <Card.Text>{set.value}</Card.Text>
